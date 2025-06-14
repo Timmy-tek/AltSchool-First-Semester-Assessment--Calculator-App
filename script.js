@@ -1,6 +1,7 @@
 const display = document.getElementById("display");
 const history = document.getElementById("history");
 const historyBtn = document.getElementById("historyBtn");
+const notificationBtn = document.getElementById("notificationBtn");
 const resetBtn = document.getElementById("resetBtn");
 
 function appendToDisplay(input) {
@@ -39,7 +40,7 @@ function calculate() {
   h2.textContent = `ANS:   ${display.value}`;
   history.appendChild(h2);
   history.appendChild(document.createElement("hr"));
-  historyBtn.style.backgroundColor = "white";
+  notificationBtn.style.display = "block";
 }
 
 document.addEventListener("keydown", (event) => {
@@ -62,5 +63,5 @@ resetBtn.addEventListener("click", () => {
   const historyMenu = history.querySelectorAll("h2, h3, hr");
   historyMenu.forEach((menu) => menu.remove());
   clearDisplay();
-  historyBtn.style.backgroundColor = "rgba(255, 255, 255, 0.658)";
+  notificationBtn.style.display = "none";
 });

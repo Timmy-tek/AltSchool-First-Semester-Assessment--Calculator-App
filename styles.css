@@ -18,7 +18,7 @@ body {
   position: relative;
   background-color: #242530;
   width: 400px;
-  height: 365px;
+  height: 367px;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -60,8 +60,8 @@ button {
   display: flex;
   width: 65px;
   height: 45px;
-  margin: 0% 7px;
-  margin-top: 3px;
+  margin: 0% 5px;
+  /* margin-top: 3px; */
   margin-bottom: 4px;
   border-radius: 35px;
   background-color: #404258;
@@ -73,6 +73,9 @@ button {
 }
 .numerics button:hover {
   background-color: #555875;
+}
+.numerics button:active {
+  background-color: #767ba1;
 }
 
 .operations {
@@ -103,22 +106,53 @@ button {
   margin-top: 1px;
   margin-bottom: 5px;
 }
-
 .arithmetics button:hover {
-  background-color: #d68b1b;
+  background-color: #ffb546;
+}
+.arithmetics button:active {
+  background-color: #ffd390;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10px;
+}
+
+#submit, #clear {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-weight: 400;
+  margin: 0px 5px;
+  margin-top: 1px;
+  margin-bottom: 5px;
 }
 
 #submit {
-  width: 104.83px;
-  height: 46.8px;
-  border-radius: 100px;
   background-color: #b2b2b2;
   color: black;
   font-size: 28px;
-  font-weight: 400;
+  /* width: 104.83px;
+  height: 46.8px; */
 }
 #submit:hover {
   background-color: #c7c7c7;
+}
+#submit:active {
+  background-color: #e7e7e7;
+}
+
+#clear {
+  font-size: 24px;
+  background-color: #ff5a5a;
+  color: white;
+}
+#clear:hover {
+  background-color: #ff0303;
+}
+#clear:active {
+  background-color: #ff6262;
 }
 #history {
   display: none;
@@ -131,17 +165,19 @@ button {
   overflow-y: auto;
 }
 
-h2,
-h3 {
+h2, h3 {
   margin: 3px;
 }
+
 h2 {
   text-align: right;
 }
+
 hr {
   border: 0.2px solid #404258;
   width: 100%;
 }
+
 #historyBtn {
   position: absolute;
   top: 3%;
@@ -153,6 +189,20 @@ hr {
 }
 #historyBtn:hover {
   background-color: #dadada;
+}
+#historyBtn:hover {
+  background-color: #dadada;
+}
+
+#notificationBtn{
+  display: none;
+  position: absolute;
+  top: -2%;
+  right: 1%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: red;
 }
 
 #history div {

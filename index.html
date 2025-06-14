@@ -9,6 +9,7 @@
   <body>
     <div class="calculator">
       <button id="historyBtn">></button>
+      <p id="notificationBtn"></p>
       <input class="display" type="text" id="display" />
       <div class="keys">
         <div class="numerics">
@@ -24,14 +25,16 @@
           <button onclick="appendToDisplay('.')">.</button>
           <button onclick="appendToDisplay('0')">0</button>
           <button onclick="backspace()">
-            <img src="image 1.svg" alt="" />
+            <img src="./assets/backspace.svg" alt="" />
           </button>
         </div>
         <div class="operations">
           <div class="arithmetics">
-            <button onclick="appendToDisplay('*')">x</button>
+            <button onclick="appendToDisplay('*')">
+              <img src="./assets/multiply.svg" alt="" />
+            </button>
             <button onclick="appendToDisplay('/')">
-              <img src="divide.svg" alt="" />
+              <img src="/assets/divide.svg" alt="" />
             </button>
             <button onclick="appendToDisplay('+')">+</button>
             <button onclick="appendToDisplay('-')">-</button>
@@ -42,7 +45,10 @@
               ^
             </button>
           </div>
-          <button id="submit" onclick="calculate()">=</button>
+          <div class="bottom">
+            <button id="clear" onclick="clearDisplay()">C</button>
+            <button id="submit" onclick="calculate()">=</button>
+          </div>
         </div>
       </div>
     </div>
